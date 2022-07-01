@@ -3,28 +3,35 @@ import { createSlice } from "@reduxjs/toolkit";
 export const boardSlice = createSlice({
   name: "board",
   initialState: {
-    plays: ["", "", "", "", "", "", "", "", ""],
+    board: ["", "", "", "", "", "", "", "", ""],
+    turnsCounter: 0,
     winner: "",
-    player: "X",
+    player: "",
   },
   reducers: {
-    setPlays: (state, action) => {
-      state.plays = action.payload;
+    setBoard: (state, action) => {
+      state.board = action.payload;
     },
     setWinner: (state, action) => {
       state.winner = action.payload;
     },
-    swapPlayer: (state) => {
-      state.player = state.player === "X" ? "O" : "X";
+    setPlayer: (state, action) => {
+      state.player = action.payload;
+    },
+    setTurnsCounter: (state, action) => {
+      state.turnsCounter = action.payload;
     },
   },
 });
 
-export const { setPlays } = boardSlice.actions;
+export const { setBoard, setPlayer, setWinner, setTurnsCounter } =
+  boardSlice.actions;
 
-export const handlePlays = (plays) => (dispatch) => {
-  dispatch(setPlays(plays));
+export const resetGame = () => (dispatch) => {
+  dispatch(setBoard(["", "", "", "", "", "", "", "", ""]));
+  dispatch(setPlayer(""));
+  dispatch(setWinner(""));
+  dispatch(setTurnsCounter(0));
 };
-
 
 export default boardSlice.reducer;
