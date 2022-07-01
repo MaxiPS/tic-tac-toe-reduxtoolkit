@@ -1,0 +1,41 @@
+.parent {
+    display: grid;
+    text-align: center;
+    position: relative;
+  }
+  
+  .child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    min-width: 10rem;
+    min-height: 10rem;
+    border-bottom: solid 2px black;
+    border-right: solid 2px black;
+    border-left: solid 2px black;
+  }
+  
+  .bottom-row-position-right {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+  
+  .top-row-position-right,
+  .middle-row-position-right,
+  .bottom-row-position-right {
+    border-right: none;
+    border-left: none;
+  }
+  
+  .top-row-position-left,
+  .middle-row-position-left,
+  .bottom-row-position-left {
+    border-left: none;
+    border-right: none;
+  }
+  
+  .bottom-row-position-left,
+  .bottom-row-position-middle,
+  .bottom-row-position-right {
+    border-bottom: none;
+  }
