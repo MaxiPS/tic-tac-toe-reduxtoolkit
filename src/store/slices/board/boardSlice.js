@@ -21,17 +21,15 @@ export const boardSlice = createSlice({
     setTurnsCounter: (state, action) => {
       state.turnsCounter = action.payload;
     },
+    resetBoard: (state) => {
+      state.board = ["", "", "", "", "", "", "", "", ""];
+      state.turnsCounter = 0;
+      state.winner = "";
+      state.player = "";
+    },
   },
 });
 
-export const { setBoard, setPlayer, setWinner, setTurnsCounter } =
-  boardSlice.actions;
-
-export const resetGame = () => (dispatch) => {
-  dispatch(setBoard(["", "", "", "", "", "", "", "", ""]));
-  dispatch(setPlayer(""));
-  dispatch(setWinner(""));
-  dispatch(setTurnsCounter(0));
-};
+export const { setBoard, setPlayer, setWinner, setTurnsCounter,resetBoard} = boardSlice.actions;
 
 export default boardSlice.reducer;

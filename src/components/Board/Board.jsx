@@ -66,9 +66,10 @@ export const Board = () => {
 
   return (
     <>
-      <div className="parent">
+      <div className="board">
         <div
           id="0"
+          role="button"
           onClick={handleGame}
           className="child top-row-position-left"
         >
@@ -76,6 +77,7 @@ export const Board = () => {
         </div>
         <div
           id="1"
+          role="button"
           onClick={handleGame}
           className="child top-row-position-middle"
         >
@@ -83,6 +85,7 @@ export const Board = () => {
         </div>
         <div
           id="2"
+          role="button"
           onClick={handleGame}
           className="child top-row-position-right"
         >
@@ -90,6 +93,7 @@ export const Board = () => {
         </div>
         <div
           id="3"
+          role="button"
           onClick={handleGame}
           className="child middle-row-position-left"
         >
@@ -97,6 +101,7 @@ export const Board = () => {
         </div>
         <div
           id="4"
+          role="button"
           onClick={handleGame}
           className="child middle-row-position-middle"
         >
@@ -104,6 +109,7 @@ export const Board = () => {
         </div>
         <div
           id="5"
+          role="button"
           onClick={handleGame}
           className="child middle-row-position-right"
         >
@@ -111,6 +117,7 @@ export const Board = () => {
         </div>
         <div
           id="6"
+          role="button"
           onClick={handleGame}
           className="child bottom-row-position-left"
         >
@@ -118,6 +125,7 @@ export const Board = () => {
         </div>
         <div
           id="7"
+          role="button"
           onClick={handleGame}
           className="child bottom-row-position-middle"
         >
@@ -125,6 +133,7 @@ export const Board = () => {
         </div>
         <div
           id="8"
+          role="button"
           onClick={handleGame}
           className="child bottom-row-position-right"
         >

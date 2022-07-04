@@ -1,7 +1,7 @@
 import { Board } from "./components/Board/Board";
 import { useSelector, useDispatch } from "react-redux";
 import { getWinner } from "./store/slices/board/selectors";
-import { resetGame } from "./store/slices/board/boardSlice";
+import { resetBoard } from "./store/slices/board/boardSlice";
 import "./App.css";
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
   const winner = useSelector(getWinner);
 
   return (
-    <div className="table-container">
+    <div className="board-container">
       <div className="title-container">
         <h1>Tic Tac Toe!</h1>
       </div>
@@ -18,7 +18,7 @@ const App = () => {
       </div>
       <Board />
       <div className="button-container">
-        <button className="reset-button" onClick={() => dispatch(resetGame())}>
+        <button className="reset-button" onClick={() => dispatch(resetBoard())}>
           Reset
         </button>
       </div>
